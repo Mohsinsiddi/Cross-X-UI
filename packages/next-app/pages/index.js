@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Greeter from "./components/Greeter";
 import { useToast } from "@chakra-ui/react";
 import Swaps from "./components/Swaps";
+import Track from "./components/Track";
 
 export default function Home() {
   const { isConnected } = useConnect();
@@ -28,7 +29,8 @@ export default function Home() {
       <Navbar />
       <Hero /> */}
       {/* <Hero/> */}
-      <Swaps/>
+      {/* <Swaps/> */}
+      <Track/>
       
       {isConnected && <Greeter />}
       {/* <Footer /> */}
