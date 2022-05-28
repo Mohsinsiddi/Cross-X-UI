@@ -6,6 +6,7 @@ import { useConnect } from "wagmi";
 import Footer from "./components/Footer";
 import Greeter from "./components/Greeter";
 import { useToast } from "@chakra-ui/react";
+import Swaps from "./components/Swaps";
 
 export default function Home() {
   const { isConnected } = useConnect();
@@ -23,11 +24,12 @@ export default function Home() {
   }, [toast]);
   return (
     <>
-      <Header />
+      {/* <Header />
       <Navbar />
-      <Hero />
+      <Hero /> */}
+      <Swaps/>
       {isConnected && <Greeter />}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
