@@ -8,9 +8,10 @@ import Greeter from "./components/Greeter";
 import { useToast } from "@chakra-ui/react";
 import Swaps from "./components/Swaps";
 import Track from "./components/Track";
+import { useWeb3 } from "./components/context/web3Context";
 
 export default function Home() {
-  const { isConnected } = useConnect();
+  const { isConnected } = useWeb3();
   const toast = useToast();
 
   useEffect(() => {
@@ -25,13 +26,12 @@ export default function Home() {
   }, [toast]);
   return (
     <>
-      {/* <Header />
-      <Navbar />
-      <Hero /> */}
+     
+      {/* <Hero />  */}
       {/* <Hero/> */}
-      {/* <Swaps/> */}
-      <Track/>
-      
+      <Swaps/>
+      {/* <Track/>
+       */}
       {isConnected && <Greeter />}
       {/* <Footer /> */}
     </>

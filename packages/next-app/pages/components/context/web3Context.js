@@ -1,21 +1,52 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState, useContext } from "react";
 
 const Web3Context = createContext()
 
 export const Web3Provider = ({ children }) => {
-    const [web3, setWeb3] = useState()
+    const [isWalletConnected, setIsWalletConnected] = useState(false)
+    const [walletAddress, setWalletAddress] = useState(null)
 
-    useEffect(() => {
-        const web3 = window.ethereum
 
-        setWeb3(web3)
-    }, [])
+    // useEffect(() => {
+    //     checkIfWalletIsConnected()
+    // })
+
+    const checkIfWalletIsConnected = async () => {
+        try {
+          if (window.ethereum) {
+            const accounts = await window.ethereum.request({
+              method: 'eth_requestAccounts',
+            })
+            const account = accounts[0]
+            setIsWalletConnected(true)
+            setWalletAddress(account)
+            console.log('Account Connected: ', account)
+    
+            window.ethereum.on('accountsChanged', refresh)
+          } else {
+            setError('Install a MetaMask wallet to get our token')
+            console.log('No Metamask detected')
+          }
+        } catch (error) {
+          console.log(error)
+        }
+      }
+
+      const refresh = () => {
+          setIsWalletConnected(false)
+          setWalletAddress(null)
+          console.log("Refresh Function Called")
+          checkIfWalletIsConnected()
+      }
     
     return (
-        <Web3Context.Provider>
-            value={{
-                web3
-            }}
+        <Web3Context.Provider
+        value={{
+                isWalletConnected,
+                walletAddress,
+                checkIfWalletIsConnected
+            }}>
+            {children}
         </Web3Context.Provider>
     )
 }

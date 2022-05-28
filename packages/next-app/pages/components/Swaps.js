@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Heading,
   Menu,
@@ -28,7 +28,7 @@ import { useWeb3 } from "./context/web3Context";
 function Swaps() {
     const web3Context = useWeb3()
 
-    const web3 = web3Context.web3
+
 
   const [amount, setAmount] = useState(null);
   const [totoken, setToToken] = useState("Select Token");
@@ -76,7 +76,8 @@ function Swaps() {
                   padding={"50px"}
                   mt={"100px"}
                   borderRadius={"38px"}
-                  bgColor={"blue.100"}
+                  bgColor={"white"}
+                  opacity={""}
                 >
                   <Flex>
                     <Flex flexDirection={"column"}>
@@ -135,7 +136,8 @@ function Swaps() {
                   padding={"50px"}
                   mt={"100px"}
                   borderRadius={"38px"}
-                  bgColor={"blue.100"}
+                  bgColor={"white"}
+                  
                 >
                   <Flex>
                     <Flex flexDirection={"column"}>

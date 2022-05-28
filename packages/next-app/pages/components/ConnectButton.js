@@ -13,54 +13,26 @@ import {
   Text,
   Flex,
 } from "@chakra-ui/react";
+import { useWeb3 } from "./context/web3Context";
 
 const ConnectButton = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const cancelRef = React.useRef();
+  
+  const web3Context = useWeb3()
 
-  const [data, setdata] = useState({
-    address: "",
-    Balance: null,
-  });
+  const isWalletConnected = web3Context.isWalletConnected
+  const walletAddress = web3Context.walletAddress
 
-  const [addr, setAddr] = useState("");
+  const checkIfWalletIsConnected = web3Context.checkIfWalletIsConnected
 
   const btnhandler = () => {
-    if (window.ethereum) {
-      window.ethereum
-        .request({ method: "eth_requestAccounts" })
-        .then((res) => accountChangeHandler(res[0]));
-    } else {
-      alert("install metamask extension!!");
-    }
-  };
-
-  const getbalance = (address) => {
-    window.ethereum
-      .request({
-        method: "eth_getBalance",
-        params: [address, "latest"],
-      })
-      .then((balance) => {
-        // Setting balance
-        setdata({
-          Balance: ethers.utils.formatEther(balance),
-        });
-      });
-  };
-
-  const accountChangeHandler = (account) => {
-    setdata({
-      address: account,
-    });
-    setAddr(account);
-
-    getbalance(account);
+   checkIfWalletIsConnected()
   };
 
   return (
     <>
-      {addr === "" ? (
+      {!isWalletConnected ? (
         <div>
           {
             <Button colorScheme="twitter" onClick={onOpen}>
@@ -72,7 +44,7 @@ const ConnectButton = () => {
         <div>
           {
             <Button colorScheme="twitter">
-              {addr.substring(0, 7) + "..." + addr.substring(37)}
+              {walletAddress.slice(0,7)}...{walletAddress.slice(37)}
             </Button>
           }
         </div>
