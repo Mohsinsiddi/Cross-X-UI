@@ -23,8 +23,13 @@ import Objects from "./Objects";
 import { chainlist } from "./chainlist";
 import ConnectButton from "./ConnectButton";
 import Header from "../Header";
+import { useWeb3 } from "./context/web3Context";
 
 function Swaps() {
+    const web3Context = useWeb3()
+
+    const web3 = web3Context.web3
+
   const [amount, setAmount] = useState(null);
   const [totoken, setToToken] = useState("Select Token");
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex } from "@chakra-ui/react";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
+import ConnectButton from "./ConnectButton";
 
 function Navbar() {
   return (
