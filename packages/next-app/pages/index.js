@@ -27,7 +27,9 @@ export default function Home() {
       {/* <Header />
       <Navbar />
       <Hero /> */}
+      {/* <Hero/> */}
       <Swaps/>
+      
       {isConnected && <Greeter />}
       {/* <Footer /> */}
     </>

@@ -2,14 +2,20 @@ import React, { useState } from 'react';
 import { Heading,Menu,MenuButton, Container,Stack,Input,ChevronDownIcon,MenuList,MenuItem,centerContent,Center, Select,Text, Flex, Link, Code, Box, Button } from "@chakra-ui/react";
 import Objects from './Objects';
   import { chainlist } from './chainlist';
+import ConnectButton from './ConnectButton';
+import Header from '../Header';
 
 function Swaps () {
   const[amount,setAmount]=useState(null);
   const[totoken,setToToken]=useState('Select Token');
     return(
         <>
-
+ <Header/>
      <Flex bgGradient='linear(blue.100 0%, gray.100 25%, gray.100 50%)' w='100%' h={"100%"}>
+     <Flex  padding={"20px"}> 
+ 
+ 
+ </Flex>
       <Container maxW='2xl'  centerContent> 
       
       

@@ -1,55 +1,63 @@
-import { Heading, Container, Text, Flex, Link, Code } from "@chakra-ui/react";
+import { Heading, Container, Text, Flex, Link, Code, Box } from "@chakra-ui/react";
 import React from "react";
 import { useConnect } from "wagmi";
+import Header from "../Header";
 
 function Hero() {
   const { isConnected } = useConnect();
   return (
     <>
-      <Container maxW={"1100px"} h={isConnected ? "45vh" : "75vh"} px={"2rem"}>
+      <Header/>
         <Flex
-          flexDirection={"column"}
+         
           alignItems={"center"}
           justifyContent={"center"}
-          h={"100%"}
-          w={"100%"}
-          py={"4rem"}
+          h={"100vh"}
+          w={"100vw"}
+          
+          
+          bgGradient='linear(blue.100 10%, gray.100 25%, gray.100 20%)'
         >
-          <Flex justifyContent={"center"} alignItems={"center"}>
-            <Heading
-              className={"h-shadow-black"}
-              fontWeight={"700"}
-              fontSize={["1.4rem", "1rem", "2.5rem", "3rem", "4rem"]}
-            >
-              Welcome to&nbsp;
-            </Heading>
-            <Link
-              className={"h-shadow-blue"}
-              color={"#0070f3"}
-              isExternal
-              href="https://github.com/lakshh07/Web3-Starter-Kit"
-            >
-              <Heading
-                fontWeight={"700"}
-                fontSize={["1.4rem", "1rem", "2.5rem", "3rem", "4rem"]}
-              >
-                Web3 Starter Kit!
-              </Heading>
-            </Link>
-          </Flex>
+        <Flex>
+        <Box 
+             
+        
+        
+        
+        > 
+         
+        <Text
+          bgGradient="linear(to-l, #445E88, #B1C0D8)"
+          bgClip="text"
+          fontSize="8xl"
+          fontWeight="extrabold"
+          
+        >
+          CROSS 
+          
+    </Text>
+    </Box>
+    </Flex>
+     <Flex > 
+     <Box p='8'
+     pt='20' 
+     pb='100'> 
+    <Text
+    bgClip="text"
+          fontSize={"400"}
+          fontWeight="extrabold"
+          bgGradient="linear(to-l, #445E88, #B1C0D8)"> 
+          
 
-          <Text
-            textAlign={"center"}
-            mt={"4rem"}
-            fontSize={["1rem", "1rem", "1.2rem", "1.4rem", "1.6rem"]}
-          >
-            Get started by editing{" "}
-            <Code fontSize={"1.5rem"}>pages/index.js</Code>
-          </Text>
+    X
+    </Text>
+    </Box>
+    </Flex>
         </Flex>
-      </Container>
+      
     </>
   );
 }
 
 export default Hero;
+
