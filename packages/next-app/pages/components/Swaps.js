@@ -40,23 +40,23 @@ function Swaps() {
         w="100%"
         h={"100%"}
       >
-        <Flex padding={"20px"}></Flex>
+        <Flex padding={"10px"}></Flex>
         <Container maxW="2xl" centerContent>
           <Flex>
             <Box
               borderRadius={"40px"}
               blur={"6xl"}
-              padding={"40px"}
+              padding={"30px"}
               flexDirection={"row"}
               alignSelf={"center"}
               width={"55%"}
               bgColor={"whiteAlpha.400"}
               mt={"8vh"}
-              ml={"200px"}
+              ml={"400px"}
               height={"95%"}
               boxShadow={"2xl"}
             >
-              <Flex flexDirection={"row"}>
+              <Flex flexDirection={"row"} >
                 <Text
                   bgGradient="linear(to-l, #009ffd, #2a2a72)"
                   bgClip="text"
@@ -66,18 +66,19 @@ function Swaps() {
                   SWAP
                 </Text>
               </Flex>
-              <Flex>
+              <Flex
+              >
                 <Box
                   flex
                   justifyContent={"space-between"}
                   flexWrap={"wrap"}
                   ml={"5px"}
                   width={"60vw"}
-                  padding={"50px"}
-                  mt={"100px"}
+                  padding={"40px"}
+                  mt={"70px"}
                   borderRadius={"38px"}
                   bgColor={"white"}
-                  opacity={""}
+                 
                 >
                   <Flex>
                     <Flex flexDirection={"column"}>
@@ -89,7 +90,7 @@ function Swaps() {
                     <Box>
                       <Select
                         placeholder="Select a Token"
-                        borderColor={"white"}
+                        borderColor={"gray"}
                         color={"black"}
                         _hover={"none"}
                         fontSize={"15px"}
@@ -107,7 +108,7 @@ function Swaps() {
                     </Box>
                   </Flex>
                   <Box>
-                    <Text ml={"10%"} mt={"10%"} mb={"5%"}>
+                    <Text ml={"6%"} mt={"10%"} mb={"5%"}>
                       Balance:
                     </Text>
                   </Box>
@@ -116,7 +117,7 @@ function Swaps() {
                       <Input
                         placeholder="$0.0"
                         onChange={(e) => setAmount(e.target.value)}
-                        borderColor={"white"}
+                        borderColor={"gray"}
                         borderWidth={"3px"}
                         fontWeight={"bold"}
                         size="lg"
@@ -133,8 +134,8 @@ function Swaps() {
                   flexWrap={"wrap"}
                   ml={"5px"}
                   width={"60vw"}
-                  padding={"50px"}
-                  mt={"100px"}
+                  padding={"40px"}
+                  mt={"70px"}
                   borderRadius={"38px"}
                   bgColor={"white"}
                   
@@ -149,7 +150,7 @@ function Swaps() {
                     <Box>
                       <Select
                         placeholder="Select a Token"
-                        borderColor={"white"}
+                        borderColor={"gray"}
                         color={"black"}
                         _hover={"none"}
                         fontSize={"15px"}
@@ -167,7 +168,7 @@ function Swaps() {
                     </Box>
                   </Flex>
                   <Box>
-                    <Text ml={"10%"} mt={"10%"} mb={"5%"}>
+                    <Text ml={"6%"} mt={"10%"} mb={"5%"}>
                       Balance:
                     </Text>
                   </Box>
@@ -176,7 +177,7 @@ function Swaps() {
                       <Input
                         placeholder="$0.0"
                         readOnly
-                        borderColor={"white"}
+                        borderColor={"gray"}
                         borderWidth={"3px"}
                         fontWeight={"bold"}
                         size="lg"

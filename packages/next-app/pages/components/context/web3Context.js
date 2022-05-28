@@ -5,6 +5,7 @@ const Web3Context = createContext()
 export const Web3Provider = ({ children }) => {
     const [isWalletConnected, setIsWalletConnected] = useState(false)
     const [walletAddress, setWalletAddress] = useState(null)
+    const [chainID,setchainID]=useState(null);
 
 
     // useEffect(() => {

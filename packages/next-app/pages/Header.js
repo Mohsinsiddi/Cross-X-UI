@@ -81,6 +81,7 @@ const MenuLinks = ({ isOpen }) => {
         align="center"
         justify={["center", "space-between", "flex-end", "flex-end"]}
         direction={["column", "row", "row", "row"]}
+        ml={"60px"}
         
       >
         <MenuItem to="/">Home</MenuItem>

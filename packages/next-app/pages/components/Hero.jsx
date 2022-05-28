@@ -23,8 +23,8 @@ function Hero() {
         w={"100vw"}
         bgGradient="linear(blue.100 10%, gray.100 25%, gray.100 20%)"
       >
-        <Flex>
-          <Box>
+        <Flex >
+          <Box >
             <Text
               bgGradient="linear(to-l, #445E88, #B1C0D8)"
               bgClip="text"

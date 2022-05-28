@@ -27,7 +27,7 @@ function Objects() {
     <Flex>
       <Text>{selectedOption}</Text>
       <Select
-        borderColor={"white"}
+        borderColor={"gray"}
         color={"black"}
         _hover={"none"}
         fontSize={"15px"}

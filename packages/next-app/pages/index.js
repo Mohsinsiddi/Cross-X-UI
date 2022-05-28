@@ -9,10 +9,14 @@ import { useToast } from "@chakra-ui/react";
 import Swaps from "./components/Swaps";
 import Track from "./components/Track";
 import { useWeb3 } from "./components/context/web3Context";
+import { getChains } from "./components/TransactionHistory";
+import { Transaction } from "./components/Transaction";
 
 export default function Home() {
   const { isConnected } = useWeb3();
   const toast = useToast();
+
+  
 
   useEffect(() => {
     toast({
@@ -28,10 +32,11 @@ export default function Home() {
     <>
      
       {/* <Hero />  */}
-      {/* <Hero/> */}
-      <Swaps/>
-      {/* <Track/>
-       */}
+      <Hero/>
+      {/* <Swaps/> */}
+      {/* <Track/> */}
+      {/* <Track/> */}
+      
       {isConnected && <Greeter />}
       {/* <Footer /> */}
     </>
