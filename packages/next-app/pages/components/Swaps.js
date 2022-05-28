@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react'
 import {
   Heading,
   Menu,
@@ -18,50 +18,53 @@ import {
   Code,
   Box,
   Button,
-} from "@chakra-ui/react";
-import Objects from "./Objects";
-import { chainlist } from "./chainlist";
-import ConnectButton from "./ConnectButton";
-import Header from "../Header";
-import { useWeb3 } from "./context/web3Context";
+} from '@chakra-ui/react'
+import Objects from './Objects'
+import { chainlist } from './chainlist'
+import ConnectButton from './ConnectButton'
+import Header from '../Header'
+import { useWeb3 } from './context/web3Context'
 
 function Swaps() {
-    const web3Context = useWeb3()
+  const web3Context = useWeb3()
 
+  const setSwapFrom = web3Context.setSwapFrom
+  const setSwapTo = web3Context.setSwapTo
+  const swapFrom = web3Context.swapFrom
+  const swapTo = web3Context.swapTo
 
-
-  const [amount, setAmount] = useState(null);
-  const [totoken, setToToken] = useState("Select Token");
+  const [amount, setAmount] = useState(null)
+  const [totoken, setToToken] = useState('Select Token')
   return (
     <>
       <Header />
       <Flex
-        bgGradient="linear(blue.100 0%, gray.100 25%, gray.100 50%)"
-        w="100%"
-        h={"100%"}
+        bgGradient='linear(blue.100 0%, gray.100 25%, gray.100 50%)'
+        w='100%'
+        h={'100%'}
       >
-        <Flex padding={"20px"}></Flex>
-        <Container maxW="2xl" centerContent>
+        <Flex padding={'20px'}></Flex>
+        <Container maxW='2xl' centerContent>
           <Flex>
             <Box
-              borderRadius={"40px"}
-              blur={"6xl"}
-              padding={"40px"}
-              flexDirection={"row"}
-              alignSelf={"center"}
-              width={"55%"}
-              bgColor={"whiteAlpha.400"}
-              mt={"8vh"}
-              ml={"200px"}
-              height={"95%"}
-              boxShadow={"2xl"}
+              borderRadius={'40px'}
+              blur={'6xl'}
+              padding={'40px'}
+              flexDirection={'row'}
+              alignSelf={'center'}
+              width={'55%'}
+              bgColor={'whiteAlpha.400'}
+              mt={'8vh'}
+              ml={'200px'}
+              height={'95%'}
+              boxShadow={'2xl'}
             >
-              <Flex flexDirection={"row"}>
+              <Flex flexDirection={'row'}>
                 <Text
-                  bgGradient="linear(to-l, #009ffd, #2a2a72)"
-                  bgClip="text"
-                  fontSize="3xl"
-                  fontWeight="extrabold"
+                  bgGradient='linear(to-l, #009ffd, #2a2a72)'
+                  bgClip='text'
+                  fontSize='3xl'
+                  fontWeight='extrabold'
                 >
                   SWAP
                 </Text>
@@ -69,57 +72,61 @@ function Swaps() {
               <Flex>
                 <Box
                   flex
-                  justifyContent={"space-between"}
-                  flexWrap={"wrap"}
-                  ml={"5px"}
-                  width={"60vw"}
-                  padding={"50px"}
-                  mt={"100px"}
-                  borderRadius={"38px"}
-                  bgColor={"white"}
-                  opacity={""}
+                  justifyContent={'space-between'}
+                  flexWrap={'wrap'}
+                  ml={'5px'}
+                  width={'60vw'}
+                  padding={'50px'}
+                  mt={'100px'}
+                  borderRadius={'38px'}
+                  bgColor={'white'}
+                  opacity={''}
                 >
                   <Flex>
-                    <Flex flexDirection={"column"}>
+                    <Flex flexDirection={'column'}>
                       {/* <label>Select Token</label> */}
                       <Flex>
-                        <Objects />
+                        <Objects from={true} />
                       </Flex>
                     </Flex>
                     <Box>
                       <Select
-                        placeholder="Select a Token"
-                        borderColor={"white"}
-                        color={"black"}
-                        _hover={"none"}
-                        fontSize={"15px"}
-                        fontWeight={"bold"}
-                        width={"100%"}
-                        alignItems={"flex-start"}
-                        alignContent={"flex-start"}
-                        ml={"30%"}
-                        borderRadius={"22px"}
+                        placeholder='Select a Token'
+                        borderColor={'white'}
+                        color={'black'}
+                        _hover={'none'}
+                        fontSize={'15px'}
+                        fontWeight={'bold'}
+                        width={'100%'}
+                        alignItems={'flex-start'}
+                        alignContent={'flex-start'}
+                        ml={'30%'}
+                        borderRadius={'22px'}
+                        value={swapFrom}
+                        onChange={(e) => {
+                          setSwapFrom(e.target.value)
+                        }}
                       >
-                        <option value="option1"> ETH </option>
-                        <option value="option2"> MATIC </option>
-                        <option value="option3"> BNB </option>
+                        <option value='1'> ETH </option>
+                        <option value='80001'> MATIC </option>
+                        <option value='97'> BNB </option>
                       </Select>
                     </Box>
                   </Flex>
                   <Box>
-                    <Text ml={"10%"} mt={"10%"} mb={"5%"}>
+                    <Text ml={'10%'} mt={'10%'} mb={'5%'}>
                       Balance:
                     </Text>
                   </Box>
                   <Box>
                     <Stack spacing={3}>
                       <Input
-                        placeholder="$0.0"
+                        placeholder='$0.0'
                         onChange={(e) => setAmount(e.target.value)}
-                        borderColor={"white"}
-                        borderWidth={"3px"}
-                        fontWeight={"bold"}
-                        size="lg"
+                        borderColor={'white'}
+                        borderWidth={'3px'}
+                        fontWeight={'bold'}
+                        size='lg'
                       />
                       <Text>{amount}</Text>
                     </Stack>
@@ -129,57 +136,60 @@ function Swaps() {
               <Flex>
                 <Box
                   flex
-                  justifyContent={"space-between"}
-                  flexWrap={"wrap"}
-                  ml={"5px"}
-                  width={"60vw"}
-                  padding={"50px"}
-                  mt={"100px"}
-                  borderRadius={"38px"}
-                  bgColor={"white"}
-                  
+                  justifyContent={'space-between'}
+                  flexWrap={'wrap'}
+                  ml={'5px'}
+                  width={'60vw'}
+                  padding={'50px'}
+                  mt={'100px'}
+                  borderRadius={'38px'}
+                  bgColor={'white'}
                 >
                   <Flex>
-                    <Flex flexDirection={"column"}>
+                    <Flex flexDirection={'column'}>
                       {/* <label>Select Token</label> */}
                       <Flex>
-                        <Objects />
+                        <Objects from={false} />
                       </Flex>
                     </Flex>
                     <Box>
                       <Select
-                        placeholder="Select a Token"
-                        borderColor={"white"}
-                        color={"black"}
-                        _hover={"none"}
-                        fontSize={"15px"}
-                        fontWeight={"bold"}
-                        width={"100%"}
-                        alignItems={"flex-start"}
-                        alignContent={"flex-start"}
-                        ml={"30%"}
-                        borderRadius={"22px"}
+                        placeholder='Select a Token'
+                        borderColor={'white'}
+                        color={'black'}
+                        _hover={'none'}
+                        fontSize={'15px'}
+                        fontWeight={'bold'}
+                        width={'100%'}
+                        alignItems={'flex-start'}
+                        alignContent={'flex-start'}
+                        ml={'30%'}
+                        borderRadius={'22px'}
+                        value={swapTo}
+                        onChange={(e) => {
+                          setSwapTo(e.target.value)
+                        }}
                       >
-                        <option value="option1"> ETH </option>
-                        <option value="option2"> MATIC </option>
-                        <option value="option3"> BNB </option>
+                        <option value='1'> ETH </option>
+                        <option value='80001'> MATIC </option>
+                        <option value='97'> BNB </option>
                       </Select>
                     </Box>
                   </Flex>
                   <Box>
-                    <Text ml={"10%"} mt={"10%"} mb={"5%"}>
+                    <Text ml={'10%'} mt={'10%'} mb={'5%'}>
                       Balance:
                     </Text>
                   </Box>
                   <Box>
                     <Stack spacing={3}>
                       <Input
-                        placeholder="$0.0"
+                        placeholder='$0.0'
                         readOnly
-                        borderColor={"white"}
-                        borderWidth={"3px"}
-                        fontWeight={"bold"}
-                        size="lg"
+                        borderColor={'white'}
+                        borderWidth={'3px'}
+                        fontWeight={'bold'}
+                        size='lg'
                       />
                     </Stack>
                   </Box>
@@ -190,6 +200,6 @@ function Swaps() {
         </Container>
       </Flex>
     </>
-  );
+  )
 }
-export default Swaps;
+export default Swaps
