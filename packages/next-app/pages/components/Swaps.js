@@ -33,7 +33,7 @@ function Swaps() {
   const swapFrom = web3Context.swapFrom
   const swapTo = web3Context.swapTo
 
-  const [amount, setAmount] = useState(null)
+  // const [amount, setAmount] = useState(null)
   const [totoken, setToToken] = useState('Select Token')
   return (
     <>
@@ -123,13 +123,13 @@ function Swaps() {
                     <Stack spacing={3}>
                       <Input
                         placeholder='$0.0'
-                        onChange={(e) => setAmount(e.target.value)}
+                        onChange={(e) => web3Context.setAmount(e.target.value)}
                         borderColor={'white'}
                         borderWidth={'3px'}
                         fontWeight={'bold'}
                         size='lg'
                       />
-                      <Text>{amount}</Text>
+                      {/* <Text>{amount}</Text> */}
                     </Stack>
                   </Box>
                 </Box>
@@ -197,6 +197,10 @@ function Swaps() {
                   </Box>
                 </Box>
               </Flex>
+              <Box alignItems={"center"} justifyContent={"center"} alignContent={"center"} >
+          <Button variant={"solid"} onClick={web3Context.depositAsset} colorScheme={"twitter"} >Confirm Swap</Button>
+
+              </Box>
             </Box>
           </Flex>
         </Container>

@@ -1,20 +1,20 @@
 export const chainlist = {
-    "1":{
+    "4":{
         "name":"Ethereum Mainnet",
         "logo":"https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=022",
         "symbol":"ETH",
-        "chainid":"1"
+        "chainid":"4"
     },
-    "137":{
+    "80001":{
         "name":"Polygon Mainnet",
         "logo":"https://cryptologos.cc/logos/polygon-matic-logo.svg?v=022",
         "symbol":"MATIC",
-        "chainid":"137"
+        "chainid":"80001"
     },
-    "56":{
+    "97":{
         "name":"Binance Smart chain",
         "logo":"https://cryptologos.cc/logos/bnb-bnb-logo.svg?v=022",
         "symbol":"BNB",
-        "chainid":"56"
+        "chainid":"97"
     }
 }
