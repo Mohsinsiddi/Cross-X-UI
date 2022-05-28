@@ -32,11 +32,11 @@ export default function Home() {
     <>
      
       {/* <Hero />  */}
-      <Hero/>
+      {/* <Hero/> */}
       {/* <Swaps/> */}
       {/* <Track/> */}
       {/* <Track/> */}
-      
+      <Track/>
       {isConnected && <Greeter />}
       {/* <Footer /> */}
     </>

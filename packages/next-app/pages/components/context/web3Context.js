@@ -3,16 +3,10 @@ import { createContext, useEffect, useState, useContext } from 'react'
 const Web3Context = createContext()
 
 export const Web3Provider = ({ children }) => {
-<<<<<<< HEAD
-    const [isWalletConnected, setIsWalletConnected] = useState(false)
-    const [walletAddress, setWalletAddress] = useState(null)
-    const [chainID,setchainID]=useState(null);
-=======
   const [isWalletConnected, setIsWalletConnected] = useState(false)
   const [walletAddress, setWalletAddress] = useState(null)
   const [swapFrom, setSwapFrom] = useState('CRX')
   const [swapTo, setSwapTo] = useState('CRX')
->>>>>>> 1c19b3148e6b0f7df4abcf415da217ac17a1f7f7
 
   const [swapFromBlockchain, setSwapFromBlockchain] = useState('1')
   const [swapToBlockchain, setSwapToBlockchain] = useState('1')

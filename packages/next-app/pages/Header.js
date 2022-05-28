@@ -84,7 +84,7 @@ const MenuLinks = ({ isOpen }) => {
         ml={"60px"}
         
       >
-        <MenuItem to="/">Home</MenuItem>
+        <MenuItem to="/Hero">Home</MenuItem>
         <MenuItem to="/faetures">Features </MenuItem>
         <MenuItem to="/pricing"> Swap </MenuItem>
         <MenuItem to="/Track"> Track </MenuItem>

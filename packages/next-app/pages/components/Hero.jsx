@@ -18,13 +18,14 @@ function Hero() {
       <Header />
       <Flex
         alignItems={"center"}
-        justifyContent={"center"}
-        h={"100vh"}
+        
+       
+        h={"88vh"}
         w={"100vw"}
         bgGradient="linear(blue.100 10%, gray.100 25%, gray.100 20%)"
       >
-        <Flex >
-          <Box >
+       
+          <Box ml={"50px"} >
             <Text
               bgGradient="linear(to-l, #445E88, #B1C0D8)"
               bgClip="text"
@@ -34,8 +35,8 @@ function Hero() {
               CROSS
             </Text>
           </Box>
-        </Flex>
-        <Flex>
+        
+        
           <Box p="8" pt="20" pb="100">
             <Text
               bgClip="text"
@@ -46,7 +47,19 @@ function Hero() {
               X
             </Text>
           </Box>
-        </Flex>
+        
+         <Box> 
+         
+         
+         
+         {/* <Image src='https://bit.ly/dan-abramov' alt='' /> */}
+         
+         
+         </Box>
+
+
+
+
       </Flex>
     </>
   );
