@@ -33,6 +33,9 @@ function Swaps() {
   const swapFrom = web3Context.swapFrom
   const swapTo = web3Context.swapTo
 
+  const approved = web3Context.approved
+  const deposited = web3Context.deposited
+
   // const [amount, setAmount] = useState(null)
   const [totoken, setToToken] = useState('Select Token')
   return (
@@ -42,6 +45,7 @@ function Swaps() {
         bgGradient='linear(blue.100 0%, gray.100 25%, gray.100 50%)'
         w='100%'
         h={'100%'}
+        textAlign={'center'}
       >
         <Flex padding={'20px'}></Flex>
         <Container maxW='2xl' centerContent>
@@ -197,9 +201,34 @@ function Swaps() {
                   </Box>
                 </Box>
               </Flex>
-              <Box alignItems={"center"} justifyContent={"center"} alignContent={"center"} >
-          <Button variant={"solid"} onClick={web3Context.depositAsset} colorScheme={"twitter"} >Confirm Swap</Button>
-
+              <Box
+                alignItems={'center'}
+                justifyContent={'center'}
+                alignContent={'center'}
+                mt={'5'}
+              >
+                {approved === null && deposited === null ? (
+                  <Button
+                    variant={'solid'}
+                    onClick={web3Context.depositAsset}
+                    colorScheme={'twitter'}
+                  >
+                    Confirm Swap
+                  </Button>
+                ) : (
+                  <Button variant={'solid'} colorScheme={'twitter'}>
+                    {approved === null ? null : approved === false ? (
+                      <h1>Approving...</h1>
+                    ) : (
+                      <h1>Approved</h1>
+                    )}
+                    {deposited === null ? null : deposited === false ? (
+                      <h1>Depositing...</h1>
+                    ) : (
+                      <h1>Deposited</h1>
+                    )}
+                  </Button>
+                )}
               </Box>
             </Box>
           </Flex>
