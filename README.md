@@ -1,5 +1,5 @@
 # 🦄 Web3 Starter Kit
-
+# NextJS
 A quick starter to build on Ethereum and Polygon! 💜
 >Stack used Next.js, Chakra-UI, Hardhat, Rainbow Wallet, Wagmi 🚀
 
