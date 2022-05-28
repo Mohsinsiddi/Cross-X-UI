@@ -7,11 +7,15 @@ function Objects () {
     const[totoken,setToToken]=useState('Select Token');
     const[selectedOption,setSelectedOption]=useState('');
     return ( 
+      <Flex>
+      <Text> 
       
+      {selectedOption}
+      </Text>
         <Select borderColor={"white"} color={"black"} _hover={"none"}
-        fontSize={"20px"}
+        fontSize={"15px"}
         fontWeight={"bold"}
-        width={"20%"}
+        width={"80%"}
        alignItems={"flex-start"}
        alignContent={"flex-start"}
 
@@ -23,6 +27,7 @@ function Objects () {
                             <option value={chainlist[key].chainid} >{chainlist[key].name}</option>
                         ))}
                         </Select>
+                        </Flex>
       
     )
     
