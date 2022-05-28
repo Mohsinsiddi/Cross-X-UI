@@ -107,9 +107,10 @@ function Swaps() {
                           setSwapFrom(e.target.value)
                         }}
                       >
-                        <option value='1'> ETH </option>
-                        <option value='80001'> MATIC </option>
-                        <option value='97'> BNB </option>
+                        <option value='ETH'> ETH </option>
+                        <option value='MATIC'> MATIC </option>
+                        <option value='BNP'> BNB </option>
+                        <option value='CRX'>CrossX</option>
                       </Select>
                     </Box>
                   </Flex>
@@ -170,9 +171,10 @@ function Swaps() {
                           setSwapTo(e.target.value)
                         }}
                       >
-                        <option value='1'> ETH </option>
-                        <option value='80001'> MATIC </option>
-                        <option value='97'> BNB </option>
+                        <option value='ETH'> ETH </option>
+                        <option value='MATIC'> MATIC </option>
+                        <option value='BNP'> BNB </option>
+                        <option value='CRX'>CrossX</option>
                       </Select>
                     </Box>
                   </Flex>

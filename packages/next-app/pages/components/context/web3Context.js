@@ -5,8 +5,8 @@ const Web3Context = createContext()
 export const Web3Provider = ({ children }) => {
   const [isWalletConnected, setIsWalletConnected] = useState(false)
   const [walletAddress, setWalletAddress] = useState(null)
-  const [swapFrom, setSwapFrom] = useState('1')
-  const [swapTo, setSwapTo] = useState('1')
+  const [swapFrom, setSwapFrom] = useState('CRX')
+  const [swapTo, setSwapTo] = useState('CRX')
 
   const [swapFromBlockchain, setSwapFromBlockchain] = useState('1')
   const [swapToBlockchain, setSwapToBlockchain] = useState('1')
