@@ -1,7 +1,7 @@
-#Cross|X|
+# Cross|X|
  Crossx provides a multichain platform which is all in one platform cusotmised for  dapp users that helps to track all transcations done by a user with notifications. CrossX also provides a flawalees multichain swap that helps a user to swap a coin from one chain to another from our multiple chain option .
 
- ##Features
+ ## Features
  1) Multichain 
 
 Over 10 chain to choose from to swap to your favourite chain . 
