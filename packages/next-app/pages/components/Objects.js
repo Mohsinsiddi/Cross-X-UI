@@ -31,9 +31,10 @@ function Objects({ from }) {
 
   const setSwapFromBlockchain = web3Context.setSwapFromBlockchain
   const setSwapToBlockchain = web3Context.setSwapToBlockchain
+
   return (
     <Flex>
-      <Text>{from ? swapFromBlockchain : swapToBlockchain}</Text>
+      {/* <Text>{from ? swapFromBlockchain : swapToBlockchain}</Text> */}
       <Select
         borderColor={'white'}
         color={'black'}
