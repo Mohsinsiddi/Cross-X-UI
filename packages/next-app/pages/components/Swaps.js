@@ -33,7 +33,7 @@ function Swaps() {
   const TokenVal = web3Context.selectedTokenAmount
   const approved = web3Context.approved
   const deposited = web3Context.deposited
-  
+
   // const [amount, setAmount] = useState(null)
   const [totoken, setToToken] = useState('Select Token')
   return (
@@ -71,19 +71,17 @@ function Swaps() {
                   SWAP
                 </Text>
               </Flex>
-              <Flex
-              >
+              <Flex>
                 <Box
                   flex
-                  justifyContent={"space-between"}
-                  flexWrap={"wrap"}
-                  ml={"5px"}
-                  width={"60vw"}
-                  padding={"40px"}
-                  mt={"70px"}
-                  borderRadius={"38px"}
-                  bgColor={"white"}
-                 
+                  justifyContent={'space-between'}
+                  flexWrap={'wrap'}
+                  ml={'5px'}
+                  width={'60vw'}
+                  padding={'40px'}
+                  mt={'70px'}
+                  borderRadius={'38px'}
+                  bgColor={'white'}
                 >
                   <Flex>
                     <Flex flexDirection={'column'}>
@@ -140,15 +138,14 @@ function Swaps() {
               <Flex>
                 <Box
                   flex
-                  justifyContent={"space-between"}
-                  flexWrap={"wrap"}
-                  ml={"5px"}
-                  width={"60vw"}
-                  padding={"40px"}
-                  mt={"70px"}
-                  borderRadius={"38px"}
-                  bgColor={"white"}
-                  
+                  justifyContent={'space-between'}
+                  flexWrap={'wrap'}
+                  ml={'5px'}
+                  width={'60vw'}
+                  padding={'40px'}
+                  mt={'70px'}
+                  borderRadius={'38px'}
+                  bgColor={'white'}
                 >
                   <Flex>
                     <Flex flexDirection={'column'}>
@@ -192,10 +189,10 @@ function Swaps() {
                       <Input
                         placeholder='$0.0'
                         readOnly
-                        borderColor={"gray"}
-                        borderWidth={"3px"}
-                        fontWeight={"bold"}
-                        size="lg"
+                        borderColor={'gray'}
+                        borderWidth={'3px'}
+                        fontWeight={'bold'}
+                        size='lg'
                       />
                     </Stack>
                   </Box>
