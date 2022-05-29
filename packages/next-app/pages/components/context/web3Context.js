@@ -163,7 +163,8 @@ export const Web3Provider = ({ children }) => {
         setAmount,
         approved,
         deposited,
-        getTokenBalance
+        getTokenBalance,
+        selectedTokenAmount
       }}
     >
       {children}

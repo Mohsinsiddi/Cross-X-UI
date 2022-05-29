@@ -87,9 +87,9 @@ const MenuLinks = ({ isOpen }) => {
         ml={"60px"}
       >
         <MenuItem to={"/Hero"} children={"Home"}></MenuItem>
-        <MenuItem to={"/features"} children={"Features"}></MenuItem>
+        
         <MenuItem to={"/components/Swaps"} children={"Swap"}></MenuItem>
-        <MenuItem to={"/Track"} children={"Track"}></MenuItem>
+        <MenuItem to={"/Track"} children={"Track"}> Harbor </MenuItem>
         <MenuItem to="/signup" isLast>
           <Button
             size="sm"
