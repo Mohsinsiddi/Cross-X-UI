@@ -81,6 +81,7 @@ function Swaps() {
                   width={"60vw"}
                   padding={"40px"}
                   mt={"70px"}
+                 
                   borderRadius={"38px"}
                   bgColor={"white"}
                   boxShadow={'xl'}
@@ -89,7 +90,7 @@ function Swaps() {
                   <Flex>
                     <Flex flexDirection={'column'}>
                       {/* <label>Select Token</label> */}
-                      <Flex>
+                      <Flex >
                         <Objects from={true}/>
                       </Flex>
                     </Flex>
@@ -99,7 +100,7 @@ function Swaps() {
                         borderColor={'white'}
                         color={'black'}
                         _hover={'none'}
-                        fontSize={'15px'}
+                        fontSize={'xl'}
                         fontWeight={'bold'}
                         width={'100%'}
                         alignItems={'flex-start'}
@@ -119,8 +120,8 @@ function Swaps() {
                     </Box>
                   </Flex>
                   <Box>
-                    <Text fontSize={"15px"} fontWeight={'bold'} textAlign={"start"} ml={'13px'} mt={'10%'} mb={'5%'}>
-                      Balance: {web3Context.selectedTokenAmount}
+                    <Text fontSize={"xl"} fontWeight={'bold'} textAlign={"start"} ml={'13px'} mt={'10%'} mb={'5%'}>
+                      Token Balance: {web3Context.selectedTokenAmount}
                     </Text>
                   </Box>
                   <Box>
@@ -166,7 +167,7 @@ function Swaps() {
                         borderColor={'white'}
                         color={'black'}
                         _hover={'none'}
-                        fontSize={'15px'}
+                        fontSize={'xl'}
                         fontWeight={'bold'}
                         width={'100%'}
                         alignItems={'flex-start'}

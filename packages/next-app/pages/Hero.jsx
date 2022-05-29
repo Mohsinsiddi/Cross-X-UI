@@ -22,7 +22,7 @@ function Hero() {
         alignItems={'center'}
         h={'88vh'}
         w={'100vw'}
-        bgGradient='linear(blue.100 10%, gray.100 25%, gray.100 20%)'
+        bgGradient='linear(gray.400 0%, gray.200 30%, gray.100 50%)'
       >
         <Box ml={'50px'}>
           <Text
@@ -46,7 +46,7 @@ function Hero() {
             width={'100vw'}
             height={'77vh'}
             mt={'80px'}
-            mr={'-30px'}
+            ml={"30px"}
           />
         </Box>
       </Flex>

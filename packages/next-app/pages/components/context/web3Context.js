@@ -148,9 +148,11 @@ export const Web3Provider = ({ children }) => {
         console.log("Address: ", address)
         const balance = (
           await tokenContract.balanceOf(address)
-        ).toString()
+        )
 
-        setTokenAmount(balance)
+        const ethBalance = ethers.utils.formatEther(balance)
+
+        setTokenAmount(ethBalance)
       } else {
         setError('Install a MetaMask wallet to get our token')
         console.log('No Metamask detected')

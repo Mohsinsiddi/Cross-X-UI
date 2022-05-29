@@ -58,9 +58,9 @@ function Objects({ from }) {
         borderColor={'white'}
         color={'black'}
         _hover={'none'}
-        fontSize={'15px'}
+        fontSize={'xl'}
         fontWeight={'bold'}
-        width={'80%'}
+        width={'100%'}
         alignItems={'flex-start'}
         alignContent={'flex-start'}
         borderRadius={'22px'}

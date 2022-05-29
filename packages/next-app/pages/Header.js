@@ -11,6 +11,7 @@ const Header = (props) => {
   const toggle = () => setIsOpen(!isOpen)
 
   return (
+    
     <NavBarContainer {...props}>
       {/* <Logo
         w="100px"
@@ -89,7 +90,7 @@ const MenuLinks = ({ isOpen }) => {
         <MenuItem to={"/Hero"} children={"Home"}></MenuItem>
         
         <MenuItem to={"/components/Swaps"} children={"Swap"}></MenuItem>
-        <MenuItem to={"/Track"} children={"Track"}> Harbor </MenuItem>
+        
         <MenuItem to="/signup" isLast>
           <Button
             size='sm'

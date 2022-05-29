@@ -1,6 +1,6 @@
 export const chainlist = {
   "4": {
-    name: 'Rinkbey Testnet ',
+    name: 'Rinkby Testnet ',
     logo: 'https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=022',
     symbol: 'ETH',
     chainid: '4',
