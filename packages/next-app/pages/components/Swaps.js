@@ -41,7 +41,7 @@ function Swaps() {
     <>
       <Header />
       <Flex
-        bgGradient='linear(blue.100 0%, gray.100 25%, gray.100 50%)'
+        bgGradient='linear(gray.400 0%, gray.200 30%, gray.100 50%)'
         w='100%'
         h={'100%'}
         textAlign={'center'}
@@ -66,7 +66,7 @@ function Swaps() {
                 <Text
                   bgGradient='linear(to-l, #009ffd, #2a2a72)'
                   bgClip='text'
-                  fontSize='3xl'
+                  fontSize='5xl'
                   fontWeight='extrabold'
                 >
                   SWAP
@@ -75,14 +75,16 @@ function Swaps() {
               <Flex>
                 <Box
                   flex
-                  justifyContent={'space-between'}
-                  flexWrap={'wrap'}
-                  ml={'5px'}
-                  width={'60vw'}
-                  padding={'40px'}
-                  mt={'70px'}
-                  borderRadius={'38px'}
-                  bgColor={'white'}
+                  justifyContent={"space-between"}
+                  flexWrap={"wrap"}
+                  ml={"5px"}
+                  width={"60vw"}
+                  padding={"40px"}
+                  mt={"70px"}
+                  borderRadius={"38px"}
+                  bgColor={"white"}
+                  boxShadow={'xl'}
+                 
                 >
                   <Flex>
                     <Flex flexDirection={'column'}>
@@ -139,14 +141,17 @@ function Swaps() {
               <Flex>
                 <Box
                   flex
-                  justifyContent={'space-between'}
-                  flexWrap={'wrap'}
-                  ml={'5px'}
-                  width={'60vw'}
-                  padding={'40px'}
-                  mt={'70px'}
-                  borderRadius={'38px'}
-                  bgColor={'white'}
+                  justifyContent={"space-between"}
+                  flexWrap={"wrap"}
+                  ml={"5px"}
+                  width={"60vw"}
+                  padding={"40px"}
+                  mt={"70px"}
+                  borderRadius={"38px"}
+                  bgColor={"white"}
+                  boxShadow={'xl'}
+
+                  
                 >
                   <Flex>
                     <Flex flexDirection={'column'}>
@@ -190,10 +195,10 @@ function Swaps() {
                       <Input
                         placeholder='$0.0'
                         readOnly
-                        borderColor={'gray'}
-                        borderWidth={'3px'}
-                        fontWeight={'bold'}
-                        size='lg'
+                        borderColor={"white"}
+                        borderWidth={"3px"}
+                        fontWeight={"bold"}
+                        size="lg"
                       />
                     </Stack>
                   </Box>
