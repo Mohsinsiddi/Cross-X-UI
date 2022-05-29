@@ -12,18 +12,9 @@ import { useWeb3 } from "./components/context/web3Context";
 
 export default function Home() {
   const { isConnected } = useWeb3();
-  const toast = useToast();
-
+ 
   useEffect(() => {
-    toast({
-      title: "Network Detail",
-      description: "use Polygon Mumbai for testing",
-      status: "info",
-      duration: 6000,
-      isClosable: false,
-      position: "top",
-    });
-  }, [toast]);
+  }, []);
   return (
     <>
      

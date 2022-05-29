@@ -32,10 +32,10 @@ function Swaps() {
   const setSwapTo = web3Context.setSwapTo
   const swapFrom = web3Context.swapFrom
   const swapTo = web3Context.swapTo
-
+  const TokenVal = web3Context.selectedTokenAmount
   const approved = web3Context.approved
   const deposited = web3Context.deposited
-
+  
   // const [amount, setAmount] = useState(null)
   const [totoken, setToToken] = useState('Select Token')
   return (
@@ -120,7 +120,7 @@ function Swaps() {
                   </Flex>
                   <Box>
                     <Text ml={'10%'} mt={'10%'} mb={'5%'}>
-                      Balance:
+                      Balance: {web3Context.selectedTokenAmount}
                     </Text>
                   </Box>
                   <Box>
