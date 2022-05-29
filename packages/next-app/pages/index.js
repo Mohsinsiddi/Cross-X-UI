@@ -23,7 +23,8 @@ export default function Home() {
       {/* <Swaps/> */}
       {/* <Track/> */}
       {/* <Track/> */}
-      <Track />
+      {/* <Track /> */}
+      <Hero />
       {isConnected && <Greeter />}
       {/* <Footer /> */}
     </>
