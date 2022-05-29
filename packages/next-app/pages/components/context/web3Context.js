@@ -20,7 +20,7 @@ export const Web3Provider = ({ children }) => {
   const [swapFrom, setSwapFrom] = useState('CRX')
   const [swapTo, setSwapTo] = useState('CRX')
   const [web3, setWeb3] = useState(null)
-  const [selectedTokenAmount,setTokenAmount]=useState(null)
+  const [selectedTokenAmount, setTokenAmount] = useState(null)
 
   const [swapFromBlockchain, setSwapFromBlockchain] = useState('4')
   const [swapToBlockchain, setSwapToBlockchain] = useState('97')
@@ -48,7 +48,7 @@ export const Web3Provider = ({ children }) => {
         setWeb3(window.ethereum)
         console.log('Account Connected: ', account)
         window.ethereum.on('accountsChanged', refresh)
-        await getTokenBalance();
+        await getTokenBalance()
       } else {
         setError('Install a MetaMask wallet to get our token')
         console.log('No Metamask detected')
@@ -77,7 +77,11 @@ export const Web3Provider = ({ children }) => {
         } else {
           bidgeContract = new ethers.Contract(BRIDGE_WRAPPER_POLY, ABI, signer)
           tokenAddress = CrossXToken_BSC
-          tokenContract = new ethers.Contract(CrossXToken_POLY, ERC20ABI, signer)
+          tokenContract = new ethers.Contract(
+            CrossXToken_POLY,
+            ERC20ABI,
+            signer
+          )
         }
         const approve = await tokenContract.approve(
           bidgeContract.address,
@@ -122,14 +126,20 @@ export const Web3Provider = ({ children }) => {
           tokenContract = new ethers.Contract(CrossXToken_BSC, ERC20ABI, signer)
         } else {
           tokenAddress = CrossXToken_POLY
-          tokenContract = new ethers.Contract(CrossXToken_POLY, ERC20ABI, signer)
+          tokenContract = new ethers.Contract(
+            CrossXToken_POLY,
+            ERC20ABI,
+            signer
+          )
         }
-      const balance = await tokenContract.balanceOf(signer.getAddress())
-      const TokenTHVal = ethers.utils.formatEther(balance);
-      console.log(TokenTHVal)
-      setTokenAmount(TokenTHVal)
-      }
-      else{
+
+        console.log(signer)
+        const balance = (
+          await tokenContract.balanceOf(await signer.getAddress())
+        ).toString()
+
+        setTokenAmount(balance)
+      } else {
         setError('Install a MetaMask wallet to get our token')
         console.log('No Metamask detected')
       }

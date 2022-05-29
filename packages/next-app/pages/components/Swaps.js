@@ -33,7 +33,7 @@ function Swaps() {
   const TokenVal = web3Context.selectedTokenAmount
   const approved = web3Context.approved
   const deposited = web3Context.deposited
-  
+
   // const [amount, setAmount] = useState(null)
   const [totoken, setToToken] = useState('Select Token')
   return (
@@ -71,8 +71,7 @@ function Swaps() {
                   SWAP
                 </Text>
               </Flex>
-              <Flex
-              >
+              <Flex>
                 <Box
                   flex
                   justifyContent={"space-between"}

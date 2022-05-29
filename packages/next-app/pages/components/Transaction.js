@@ -1,6 +1,18 @@
-import React, { useEffect,useState } from "react"
-import { Heading, Container,Button, Text, Flex, Link,Input, Code,Select,option, Box } from "@chakra-ui/react";
-import { getChains } from "./TransactionHistory";
+import React, { useEffect, useState } from 'react'
+import {
+  Heading,
+  Container,
+  Button,
+  Text,
+  Flex,
+  Link,
+  Input,
+  Code,
+  Select,
+  option,
+  Box,
+} from '@chakra-ui/react'
+import { getChains } from './TransactionHistory'
 import axios from 'axios'
 
 export const Transaction = (props) =>  {
@@ -24,15 +36,8 @@ export const Transaction = (props) =>  {
             console.log(data.parametersArray)
         }
     }
+  
 
-    useEffect(() => {
-      console.log("Parent Array: ", parentArray)
-    }, [parentArray])
-
-    useEffect(() => {
-      console.log("Parent Array: ", argArray)
-    }, [argArray])
-    
 
     
 
@@ -104,29 +109,13 @@ export const Transaction = (props) =>  {
         
        
         </Box>
-        <Box> 
+        </Box> 
         
         
         
         
         
-        </Box>
-        </Box>
-</Flex>       
-    
-     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+      </Flex>
     </>
-    
-    
-    )
-    
-    };
+  )
+}

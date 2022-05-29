@@ -14,16 +14,16 @@ import {
   Link,
   Code,
   Box,
-} from "@chakra-ui/react";
-import React from "react";
-import History from "./UserHist";
-import Navbar from "./components/Navbar";
-import Header from "./Header";
-import { Transaction } from "./components/Transaction";
-import { useWeb3 } from "./components/context/web3Context";
+} from '@chakra-ui/react'
+import React from 'react'
+import History from './UserHist'
+import Navbar from './components/Navbar'
+import Header from './Header'
+import { Transaction } from './components/Transaction'
+import { useWeb3 } from './components/context/web3Context'
 
 function Track() {
-  const web3Context = useWeb3();
+  const web3Context = useWeb3()
   return (
     <>
       <Header />
@@ -46,6 +46,6 @@ function Track() {
       </Flex>
       </Flex>
     </>
-  );
+  )
 }
-export default Track;
+export default Track
