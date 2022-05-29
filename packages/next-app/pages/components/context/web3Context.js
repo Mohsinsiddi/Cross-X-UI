@@ -45,6 +45,8 @@ export const Web3Provider = ({ children }) => {
           method: 'eth_requestAccounts',
         })
         const chainID = await window.ethereum.networkVersion;
+
+        console.log("Type of ChainID: ", typeof chainID)
         setChainID(chainID)
         setSwapFromBlockchain(chainID)
         const account = accounts[0]
@@ -137,8 +139,12 @@ export const Web3Provider = ({ children }) => {
             signer
           )
         }
+
+        const address = await signer.getAddress()
+
+        console.log("Address: ", address)
         const balance = (
-          await tokenContract.balanceOf(await signer.getAddress())
+          await tokenContract.balanceOf(address)
         ).toString()
 
         setTokenAmount(balance)

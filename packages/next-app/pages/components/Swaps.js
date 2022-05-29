@@ -119,7 +119,7 @@ function Swaps() {
                     </Box>
                   </Flex>
                   <Box>
-                    <Text ml={'10%'} mt={'10%'} mb={'5%'}>
+                    <Text fontSize={"15px"} fontWeight={'bold'} textAlign={"start"} ml={'13px'} mt={'10%'} mb={'5%'}>
                       Balance: {web3Context.selectedTokenAmount}
                     </Text>
                   </Box>
@@ -128,7 +128,7 @@ function Swaps() {
                       <Input
                         placeholder='$0.0'
                         onChange={(e) => web3Context.setAmount(e.target.value)}
-                        borderColor={'white'}
+                        borderColor={'gray'}
                         borderWidth={'3px'}
                         fontWeight={'bold'}
                         size='lg'
@@ -185,23 +185,9 @@ function Swaps() {
                       </Select>
                     </Box>
                   </Flex>
-                  <Box>
-                    <Text ml={'10%'} mt={'10%'} mb={'5%'}>
-                      Balance:
-                    </Text>
-                  </Box>
-                  <Box>
-                    <Stack spacing={3}>
-                      <Input
-                        placeholder='$0.0'
-                        readOnly
-                        borderColor={"white"}
-                        borderWidth={"3px"}
-                        fontWeight={"bold"}
-                        size="lg"
-                      />
-                    </Stack>
-                  </Box>
+                  
+                   
+                 
                 </Box>
               </Flex>
               <Box

@@ -45,7 +45,7 @@ function Hero() {
             alt=''
             width={'100vw'}
             height={'77vh'}
-            mt={'60px'}
+            mt={'80px'}
             mr={'-30px'}
           />
         </Box>

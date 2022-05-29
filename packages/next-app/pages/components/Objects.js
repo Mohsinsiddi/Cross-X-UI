@@ -72,7 +72,7 @@ function Objects({ from }) {
         }}
         className=''
       >
-{from && chainId && (<option value={chainlist[chainId].chainid}>{chainlist[chainId].name}</option>)}
+{from && chainId && (<option value={chainId}>{chainlist[chainId].name}</option>)}
         {from === false && Object.keys(chainlist).map((key) => (
           <option value={chainlist[key].chainid}>{chainlist[key].name}</option>
         ))}
