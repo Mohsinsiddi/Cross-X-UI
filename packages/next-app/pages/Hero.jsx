@@ -41,7 +41,7 @@ function Hero() {
 
         <Box>
           <Image
-            src='https://iili.io/XWvnp9.png'
+            src='https://iili.io/XXebhg.png'
             alt=''
             width={'100vw'}
             height={'77vh'}
