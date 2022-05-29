@@ -1,6 +1,7 @@
 import React from "react";
-import { Link, Box, Flex, Text, Button, Stack } from "@chakra-ui/react";
+import { Box, Flex, Text, Button, Stack } from "@chakra-ui/react";
 import ConnectButton from "./components/ConnectButton";
+import Link from "next/link";
 // import Track from "./components/Track";
 // import Logo from "..pages/vercel";
 
@@ -17,7 +18,7 @@ const Header = (props) => {
       /> */}
       <MenuToggle toggle={toggle} isOpen={isOpen} />
       <MenuLinks isOpen={isOpen} />
-      <Flex  py={"1.5em"} pt={"1em"} justifyContent={"flex-end"}>
+      <Flex py={"1.5em"} pt={"1em"} justifyContent={"flex-end"}>
         <ConnectButton />
       </Flex>
     </NavBarContainer>
@@ -56,12 +57,15 @@ const MenuToggle = ({ toggle, isOpen }) => {
 
 const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
   return (
-    <Link href={to}>
-      <Text display="block" {...rest}
-       bgGradient="linear(to-l, #445E88, #B1C0D8)"
-          bgClip="text"
-          fontSize="xl"
-          fontWeight="extrabold"
+    <Link href={to} >
+      <Text
+        display="block"
+        {...rest}
+        bgGradient="linear(to-l, #445E88, #B1C0D8)"
+        bgClip="text"
+        fontSize="xl"
+        style={{cursor:"pointer"}}
+        fontWeight="extrabold"
       >
         {children}
       </Text>
@@ -74,7 +78,6 @@ const MenuLinks = ({ isOpen }) => {
     <Box
       display={{ base: isOpen ? "block" : "none", md: "block" }}
       flexBasis={{ base: "100%", md: "auto" }}
-
     >
       <Stack
         spacing={8}
@@ -82,12 +85,11 @@ const MenuLinks = ({ isOpen }) => {
         justify={["center", "space-between", "flex-end", "flex-end"]}
         direction={["column", "row", "row", "row"]}
         ml={"60px"}
-        
       >
-        <MenuItem><a href="/Hero">Home</a></MenuItem>
-        <MenuItem to="/faetures">Features </MenuItem>
-        <MenuItem><a href="/components/Swaps">Swap</a>  </MenuItem>
-        <MenuItem><a href="/Track"> Track </a></MenuItem>
+        <MenuItem to={"/Hero"} children={"Home"}></MenuItem>
+        <MenuItem to={"/features"} children={"Features"}></MenuItem>
+        <MenuItem to={"/components/Swaps"} children={"Swap"}></MenuItem>
+        <MenuItem to={"/Track"} children={"Track"}></MenuItem>
         <MenuItem to="/signup" isLast>
           <Button
             size="sm"
@@ -95,11 +97,9 @@ const MenuLinks = ({ isOpen }) => {
             color={["primary.500", "primary.500", "white", "white"]}
             bg={["white", "white", "primary.500", "primary.500"]}
             _hover={{
-              bg: ["primary.100", "primary.100", "primary.600", "primary.600"]
+              bg: ["primary.100", "primary.100", "primary.600", "primary.600"],
             }}
-          >
-            
-          </Button>
+          ></Button>
         </MenuItem>
       </Stack>
     </Box>
@@ -114,7 +114,6 @@ const NavBarContainer = ({ children, ...props }) => {
       justify="space-between"
       wrap="wrap"
       w="100%"
-      
       p={3}
       bg={["primary.500", "primary.500", "transparent", "transparent"]}
       color={["white", "white", "primary.700", "primary.700"]}

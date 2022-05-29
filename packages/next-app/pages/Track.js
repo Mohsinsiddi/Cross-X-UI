@@ -32,7 +32,6 @@ function Track() {
       <Flex flexDirection={"row"} width={"100%"}>
         <Box  height={"100vh"} width={"50%"} padding={'55px'} >
         <Box   bgColor={"blue.100"} ml={"5px"} width={"500px"} height={'100px'} borderRadius={"22px"}> 
-        <a href="/Hero">Link</a>
         <Text textAlign={"center"} padding={'20px'} fontWeight={"bold"}>
                 {" "}
                 YOU ARE NOW TRACKING

@@ -6,10 +6,13 @@ import {
   Link,
   Code,
   Box,
+  Image,
 } from "@chakra-ui/react";
 import React from "react";
 import { useConnect } from "wagmi";
 import Header from "./Header";
+import { MyComponent } from "./MyComponent";
+
 
 function Hero() {
   const { isConnected } = useConnect();
@@ -26,6 +29,7 @@ function Hero() {
       >
        
           <Box ml={"50px"} >
+
             <Text
               bgGradient="linear(to-l, #445E88, #B1C0D8)"
               bgClip="text"
@@ -38,21 +42,15 @@ function Hero() {
         
         
           <Box p="8" pt="20" pb="100">
-            <Text
-              bgClip="text"
-              fontSize={"400"}
-              fontWeight="extrabold"
-              bgGradient="linear(to-l, #445E88, #B1C0D8)"
-            >
-              X
-            </Text>
+          <MyComponent /> 
+
           </Box>
-        
+          
          <Box> 
          
          
          
-         {/* <Image src='https://bit.ly/dan-abramov' alt='' /> */}
+         <Image src='https://iili.io/XWvnp9.png' alt='' width={"100vw"} height={"77vh"} mt={"60px"} mr={"-30px"}/>
          
          
          </Box>

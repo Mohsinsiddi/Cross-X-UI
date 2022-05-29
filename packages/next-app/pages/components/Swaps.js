@@ -20,8 +20,6 @@ import {
   Button,
 } from '@chakra-ui/react'
 import Objects from './Objects'
-import { chainlist } from './chainlist'
-import ConnectButton from './ConnectButton'
 import Header from '../Header'
 import { useWeb3 } from './context/web3Context'
 
