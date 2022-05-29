@@ -16,11 +16,11 @@ import {
   Box,
 } from "@chakra-ui/react";
 import React from "react";
-import History from "../UserHist";
-import Navbar from "./Navbar";
-import Header from "../Header";
-import { Transaction } from "./Transaction";
-import { useWeb3 } from "./context/web3Context";
+import History from "./UserHist";
+import Navbar from "./components/Navbar";
+import Header from "./Header";
+import { Transaction } from "./components/Transaction";
+import { useWeb3 } from "./components/context/web3Context";
 
 function Track() {
   const web3Context = useWeb3();
@@ -32,7 +32,7 @@ function Track() {
       <Flex flexDirection={"row"} width={"100%"}>
         <Box  height={"100vh"} width={"50%"} padding={'55px'} >
         <Box   bgColor={"blue.100"} ml={"5px"} width={"500px"} height={'100px'} borderRadius={"22px"}> 
-        
+        <a href="/Hero">Link</a>
         <Text textAlign={"center"} padding={'20px'} fontWeight={"bold"}>
                 {" "}
                 YOU ARE NOW TRACKING

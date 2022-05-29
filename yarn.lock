@@ -5099,8 +5099,6 @@
     "ethereumjs-util" "^6.0.0"
 
 "ethereumjs-abi@0.6.5":
-  "integrity" "sha1-WmN+8Wq0NHP6cqKa2QhxQFs/UkE="
-  "resolved" "https://registry.npmjs.org/ethereumjs-abi/-/ethereumjs-abi-0.6.5.tgz"
   "version" "0.6.5"
   dependencies:
     "bn.js" "^4.10.0"
@@ -5225,8 +5223,6 @@
     "ethereumjs-util" "^6.0.0"
 
 "ethereumjs-util@^4.3.0":
-  "integrity" "sha512-WrckOZ7uBnei4+AKimpuF1B3Fv25OmoRgmYCpGsP7u8PFxXAmAgiJSYT2kRWnt6fVIlKaQlZvuwXp7PIrmn3/w=="
-  "resolved" "https://registry.npmjs.org/ethereumjs-util/-/ethereumjs-util-4.5.1.tgz"
   "version" "4.5.1"
   dependencies:
     "bn.js" "^4.8.0"
@@ -5249,8 +5245,6 @@
     "safe-buffer" "^5.1.1"
 
 "ethereumjs-util@^5.2.0":
-  "integrity" "sha512-v3kT+7zdyCm1HIqWlLNrHGqHGLpGYIhjeHxQjnDXjLT2FyGJDsd3LWMYUo7pAFRrk86CR3nUJfhC81CCoJNNGQ=="
-  "resolved" "https://registry.npmjs.org/ethereumjs-util/-/ethereumjs-util-5.2.1.tgz"
   "version" "5.2.1"
   dependencies:
     "bn.js" "^4.11.0"
@@ -5900,8 +5894,6 @@
     "universalify" "^0.1.0"
 
 "fs-extra@^4.0.3":
-  "integrity" "sha512-q6rbdDd1o2mAnQreO7YADIxf/Whx4AHBiRf6d+/cVT8h44ss+lHgxf1FemcqDnQt9X3ct4McHr+JMGlYSsK7Cg=="
-  "resolved" "https://registry.npmjs.org/fs-extra/-/fs-extra-4.0.3.tgz"
   "version" "4.0.3"
   dependencies:
     "graceful-fs" "^4.1.2"
@@ -9043,8 +9035,6 @@
     "util-deprecate" "~1.0.1"
 
 "readable-stream@^2.2.8":
-  "integrity" "sha512-Ebho8K4jIbHAxnuxi7o42OrZgF/ZTNcsZj6nRKyUmkhLFq8CHItp/fy6hQZuZmP/n3yZ9VBUbp4zz/mX8hmYPw=="
-  "resolved" "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.7.tgz"
   "version" "2.3.7"
   dependencies:
     "core-util-is" "~1.0.0"

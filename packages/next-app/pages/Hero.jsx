@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { useConnect } from "wagmi";
-import Header from "../Header";
+import Header from "./Header";
 
 function Hero() {
   const { isConnected } = useConnect();
