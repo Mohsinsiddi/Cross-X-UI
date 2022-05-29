@@ -53,9 +53,9 @@ export const Web3Provider = ({ children }) => {
         setWeb3(window.ethereum)
         console.log('Account Connected: ', account)
         window.ethereum.on('accountsChanged', refresh)
-        await getTokenBalance()
+        await getTokenBalance(chainID)
       } else {
-        setError('Install a MetaMask wallet to get our token')
+        setError('Install a MetaMask walhlet to get our token')
         console.log('No Metamask detected')
       }
     } catch (error) {
@@ -116,17 +116,20 @@ export const Web3Provider = ({ children }) => {
     }
   }
 
-  const getTokenBalance = async () => {
+  const getTokenBalance = async (chainID) => {
     try {
       if (window.ethereum) {
         const provider = new ethers.providers.Web3Provider(window.ethereum)
         const signer = provider.getSigner()
         let tokenAddress
         let tokenContract
-        if (swapFromBlockchain == '4') {
+        console.log("Get Token ",swapFromBlockchain)
+        console.log(swapFromBlockchain)
+        if (chainID == '4') {
+          console.log("Hii")
           tokenAddress = CrossXToken_ETH
           tokenContract = new ethers.Contract(CrossXToken_ETH, ERC20ABI, signer)
-        } else if (swapFromBlockchain == '97') {
+        } else if (chainID == '97') {
           tokenAddress = CrossXToken_BSC
           tokenContract = new ethers.Contract(CrossXToken_BSC, ERC20ABI, signer)
         } else {
