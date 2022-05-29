@@ -10,6 +10,7 @@ import {
   CrossXToken_ETH,
   CrossXToken_POLY,
 } from '../../../constants/constants'
+import { chainlist } from '../chainlist'
 
 const Web3Context = createContext()
 
@@ -21,8 +22,9 @@ export const Web3Provider = ({ children }) => {
   const [swapTo, setSwapTo] = useState('CRX')
   const [web3, setWeb3] = useState(null)
   const [selectedTokenAmount, setTokenAmount] = useState(null)
+  const [chainID,setChainID] = useState(null)
 
-  const [swapFromBlockchain, setSwapFromBlockchain] = useState('4')
+  const [swapFromBlockchain, setSwapFromBlockchain] = useState(chainID)
   const [swapToBlockchain, setSwapToBlockchain] = useState('97')
 
   const [approved, setApproved] = useState(null)
@@ -42,6 +44,9 @@ export const Web3Provider = ({ children }) => {
         const accounts = await window.ethereum.request({
           method: 'eth_requestAccounts',
         })
+        const chainID = await window.ethereum.networkVersion;
+        setChainID(chainID)
+        setSwapFromBlockchain(chainID)
         const account = accounts[0]
         setIsWalletConnected(true)
         setWalletAddress(account)
@@ -57,6 +62,8 @@ export const Web3Provider = ({ children }) => {
       console.log(error)
     }
   }
+
+
 
   const depositAsset = async () => {
     try {
@@ -74,9 +81,9 @@ export const Web3Provider = ({ children }) => {
           bidgeContract = new ethers.Contract(BRIDGE_WRAPPER_BSC, ABI, signer)
           tokenAddress = CrossXToken_BSC
           tokenContract = new ethers.Contract(CrossXToken_BSC, ERC20ABI, signer)
-        } else {
+        } else if (swapFromBlockchain == '80001'){
           bidgeContract = new ethers.Contract(BRIDGE_WRAPPER_POLY, ABI, signer)
-          tokenAddress = CrossXToken_BSC
+          tokenAddress = CrossXToken_POLY
           tokenContract = new ethers.Contract(
             CrossXToken_POLY,
             ERC20ABI,
@@ -87,7 +94,6 @@ export const Web3Provider = ({ children }) => {
           bidgeContract.address,
           utils.parseEther(amount)
         )
-
         setApproved(false)
         const approveEventConfirmation = await approve.wait()
         setApproved(true)
@@ -96,7 +102,6 @@ export const Web3Provider = ({ children }) => {
           utils.parseEther(amount),
           swapToBlockchain
         )
-
         setApproved(null)
         setDeposited(false)
         const depositEventConfirmation = await tx.wait()
@@ -132,8 +137,6 @@ export const Web3Provider = ({ children }) => {
             signer
           )
         }
-
-        console.log(signer)
         const balance = (
           await tokenContract.balanceOf(await signer.getAddress())
         ).toString()
@@ -175,6 +178,7 @@ export const Web3Provider = ({ children }) => {
         deposited,
         getTokenBalance,
         selectedTokenAmount,
+        chainID
       }}
     >
       {children}

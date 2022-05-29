@@ -32,6 +32,25 @@ function Objects({ from }) {
   const setSwapFromBlockchain = web3Context.setSwapFromBlockchain
   const setSwapToBlockchain = web3Context.setSwapToBlockchain
 
+  const chainId = web3Context.chainID
+  console.log("chainId from object page",chainId)
+
+  const changeNetwork = async ({ networkName, setError }) => {
+    try {
+      if (!window.ethereum) throw new Error("No crypto wallet found");
+      await window.ethereum.request({
+        method: "wallet_addEthereumChain",
+        params: [
+          {
+            ...networks[networkName]
+          }
+        ]
+      });
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
   return (
     <Flex>
       {/* <Text>{from ? swapFromBlockchain : swapToBlockchain}</Text> */}
@@ -53,7 +72,8 @@ function Objects({ from }) {
         }}
         className=''
       >
-        {Object.keys(chainlist).map((key) => (
+{from && chainId && (<option value={chainlist[chainId].chainid}>{chainlist[chainId].name}</option>)}
+        {from === false && Object.keys(chainlist).map((key) => (
           <option value={chainlist[key].chainid}>{chainlist[key].name}</option>
         ))}
       </Select>

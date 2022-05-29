@@ -22,6 +22,7 @@ import {
 import Objects from './Objects'
 import Header from '../Header'
 import { useWeb3 } from './context/web3Context'
+import NetworkDropdown from './NetworkDropdown'
 
 function Swaps() {
   const web3Context = useWeb3()
@@ -87,7 +88,7 @@ function Swaps() {
                     <Flex flexDirection={'column'}>
                       {/* <label>Select Token</label> */}
                       <Flex>
-                        <Objects from={true} />
+                        <Objects from={true}/>
                       </Flex>
                     </Flex>
                     <Box>
